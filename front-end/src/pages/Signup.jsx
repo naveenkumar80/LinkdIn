@@ -103,13 +103,14 @@ const Signup = () => {
 
         {/* Confirm Password */}
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           name="confirmPassword"
           placeholder="Confirm Password"
           value={formData.confirmPassword}
           onChange={handleChange}
           className="w-full p-3 mt-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+        
         {errors.confirmPassword && (
           <p className="text-red-500 text-sm mt-1">
             {errors.confirmPassword}
