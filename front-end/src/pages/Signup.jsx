@@ -80,6 +80,7 @@ const Signup = () => {
       navigate("/login");
     } catch (error) {
       setServerError("Unable to connect to the server");
+      console.error(error);
     } finally {
       setIsSubmitting(false);
     }
